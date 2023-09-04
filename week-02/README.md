@@ -29,12 +29,12 @@ Kode Dart dieksekusi pada lingkungan yang mendukung dan perlu memperhatikan fitu
   a. Kompilasi JIT adalah pengkompilan kode sumber sesuai kebutuhan (Just in time) oleh Dart VM, memungkinkan debugging dan hot reload selama pengembangan <br>
   b. Kompilasi AOT mengoptimalkan performa dengan Dart VM dan kode yang dikompilasi sebelumnya. Ini membuat VM berfungsi sebagai sistem runtime Dart lengkap, termasuk garbage collector dan metode-metode SDK Dart. Meskipun meningkatkan performa secara signifikan dibandingkan dengan JIT, kompilasi AOT tidak mendukung fitur debugging dan hot reload <br>
 - Operator dari Dart <br>
-  1. Arithmetic <br>
-  2. Increment and Decrement <br>
-  3. Equality and Relational <br>
-  4. Logical Operator <br>
+a. Arithmetic <br>
+b. Increment and Decrement <br>
+b. Equality and Relational <br>
+c. Logical Operator <br>
 - Desain Flutter <br>
-  - DartPad [lebih detail](https://jti-polinema.github.io/flutter-codelab/06-pengantar-bahasa-pemrograman-dart-bag-1/#5)<br>
+  DartPad [lebih detail](https://jti-polinema.github.io/flutter-codelab/06-pengantar-bahasa-pemrograman-dart-bag-1/#5)<br>
 
 ### SOAL NO 4
 Jawaban no 4 dapat dilihat [disini](https://www.canva.com/design/DAFtcoxPAGE/g-DhZM3OsrT12VQp3lFBhQ/edit?utm_content=DAFtcoxPAGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
