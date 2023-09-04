@@ -1,1 +1,6 @@
-1. Modifikasilah kode pada baris 3 di VS Code atau Editor code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
+### SOAL NO 1
+> Kode
+![alt text](?week-02\docs\jawaban1.png)
+> Output
+![alt text](?week-02\docs\soal1.png)
+
