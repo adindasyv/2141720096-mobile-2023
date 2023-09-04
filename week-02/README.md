@@ -30,28 +30,15 @@ Kode Dart dieksekusi pada lingkungan yang mendukung dan perlu memperhatikan fitu
   b. Kompilasi AOT mengoptimalkan performa dengan Dart VM dan kode yang dikompilasi sebelumnya. Ini membuat VM berfungsi sebagai sistem runtime Dart lengkap, termasuk garbage collector dan metode-metode SDK Dart. Meskipun meningkatkan performa secara signifikan dibandingkan dengan JIT, kompilasi AOT tidak mendukung fitur debugging dan hot reload <br>
 - Operator dari Dart <br>
   1. Arithmetic <br>
-     + untuk penambahan <br>
-     - untuk pengurangan <br>
-     * untuk perkalian <br>
-     / untuk pembagian <br>
-     ~/ untuk pembagian bilangan bulat <br>
-     % untuk operasi mudulus <br>
-     -expresion untuk negasi <br>
   2. Increment and Decrement <br>
-     ++var atau var++ untuk menambah variabel var sebesar 1 <br>
-     --var atau var-- untuk mengurangi variabel var sebesar 1 <br>
   3. Equality and Relational <br>
-     == untuk memeriksa apakah operan sama <br>
-     != untuk memeriksa apakah operan berbeda <br>
-      Untuk melakukan pengujian relasional, maka gunakan operator sebagai berikut: <br>
-      > memeriksa apakah operan kiri lebih besar daripada operan kanan <br>
-      < memeriksa apakah operan kiri lebih kecil dari operan kanan <br>
-      >= memeriksa apakah operan kiri lebih besar atau sama dengan operan kanan <br>
-      <= memeriksa apakah operan kiri kurang dari atau sama dengan operan kanan <br>
   4. Logical Operator <br>
-     !expression negasi atau kebalikan hasil ekspresi yaitu true menjadi false, begitupun sebaliknya
-     || menerapkan operasi logika OR antara dua ekspresi
-     && menerapkan operasi logika AND antara dua ekspresi
+- Desain Flutter <br>
+  - DartPad [lebih detail](https://jti-polinema.github.io/flutter-codelab/06-pengantar-bahasa-pemrograman-dart-bag-1/#5)<br>
+
+### SOAL NO 4
+Jawaban no 4 dapat dilihat [disini](https://www.canva.com/design/DAFtcoxPAGE/g-DhZM3OsrT12VQp3lFBhQ/edit?utm_content=DAFtcoxPAGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 
 
 
