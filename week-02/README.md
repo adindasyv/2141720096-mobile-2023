@@ -1,1 +1,4 @@
-1. Modifikasilah kode pada baris 3 di VS Code atau Editor code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
+### SOAL NO 1
+> Kode
+![alt text](?https://github.com/adindasyv/2141720096-mobile-2023/blob/main/week-02/docs/soal1.png)
+> Output
