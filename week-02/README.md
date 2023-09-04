@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-### SOAL NO 1
-> Kode
-![alt text](?week-02\docs\jawaban1.png)
-> Output
-![alt text](?week-02\docs\soal1.png)
-=======
 ### JAWABAN NO 1
 - Kode <br>
 ![alt text](https://github.com/adindasyv/2141720096-mobile-2023/blob/main/week-02/docs/soal1.png?raw=true)
@@ -46,7 +39,4 @@ Kode Dart dieksekusi pada lingkungan yang mendukung dan perlu memperhatikan fitu
 ### JAWABAN NO 4
 Jawaban no 4 dapat dilihat [disini](https://www.canva.com/design/DAFtcoxPAGE/g-DhZM3OsrT12VQp3lFBhQ/edit?utm_content=DAFtcoxPAGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-
-
->>>>>>> e57dcf6167be21e34e47730c9e34fafcd667b718
 
