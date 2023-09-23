@@ -81,6 +81,30 @@ Tunjukkan hasilnya jika variabel login mempunyai kondisi lain.
 Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
 ![Alt text](docs/l6p4.png)
 Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Jelaskan manfaat Collection For dan dokumentasikan hasilnya.
+- Tidak terjadi eror karena kode di atas membuat dua daftar: listOfInts yang berisi angka [1, 2, 3], dan listOfStrings yang dibuat dengan ekspresi for-in yang menambahkan tanda '#' di depan setiap elemen dalam listOfInts. Hasilnya adalah listOfStrings yang berisi ['#0', '#1', '#2', '#3']. Pernyataan assert memeriksa apakah elemen ke-1 dalam listOfStrings adalah '#1', yang benar. Akhirnya, hasil dari listOfStrings dicetak menggunakan print. 
+- Collection for memungkinkan pembuatan koleksi data secara deklaratif berdasarkan koleksi sumber, menghasilkan kode yang lebih ringkas dan mudah dibaca, serta mempermudah transformasi dan manipulasi data dalam bahasa pemrograman Dart.
+### Praktikum 5 : Eksperimen Tipe Data Records
+#### Langkah 1
+Ketik atau salin kode program berikut ke dalam fungsi main().
+![Alt text](docs/l1p5.png)
+#### Langkah 2
+Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+![Alt text](<docs/l2p5 eror.png>)
+- Kode diatas mengalami eror saat di run karena tidak ada tanda ; pada akhir kode. Untuk perbaikan bisa dilihat pada kode dibawah ini
+![Alt text](docs/l2p5.png)
+#### Langkah 3
+Tambahkan kode program berikut di luar scope void main(), lalu coba eksekusi (Run) kode Anda. Apa yang terjadi ? Jika terjadi error, silakan perbaiki. 
+![Alt text](<docs/l3p5 eror.png>)
+Gunakan fungsi tukar() di dalam main() sehingga tampak jelas proses pertukaran value field di dalam Records.
+![Alt text](<docs/l3p5 sukses.png>)
+#### Langkah 4
+Tambahkan kode program berikut di dalam scope void main(), lalu coba eksekusi (Run) kode Anda.
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki. 
+![Alt text](<docs/l4p5 eror.png>)
+Inisialisasi field nama dan NIM Anda pada variabel record mahasiswa di atas. Dokumentasikan hasilnya dan buat laporannya!
+![Alt text](<docs/l4p5 sukses.png>)
+#### Langkah 5
+Tambahkan kode program berikut di dalam scope void main(), lalu coba eksekusi (Run) kode Anda.
+Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gantilah salah satu isi record dengan nama dan NIM Anda, lalu dokumentasikan hasilnya dan buat laporannya!
+![Alt text](docs/l5p5.png)
 
-
-### Praktikum 5
