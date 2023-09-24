@@ -144,5 +144,5 @@ a. Lexical Scope (Lingkup Lexical): Variabel memiliki ruang lingkup yang ditentu
 b. Lexical Closures (Penutupan Lexical): Fungsi dapat mengakses variabel-variabel dalam ruang lingkup sekitarnya, bahkan ketika fungsi tersebut digunakan di luar ruang lingkup aslinya. Fungsi "menutup" (close) variabel-variabel tersebut sehingga tetap dapat diakses.
 ![Alt text](<docs/tugas 6b.png>)
 #### 7. Jelaskan dengan contoh cara membuat return multiple value di Functions! 
-- Dalam Dart, kita bisa mengembalikan beberapa nilai dari sebuah fungsi dengan mengemas nilai ke dalam sebuah objek atau tipe data yang sesuai. Salah satu cara yang umum adalah mengembalikan list. Ini adalah kode membuat fungsi yang mengembalikan multiple value menggunakan list
+- Dalam Dart, kita bisa mengembalikan beberapa nilai dari sebuah fungsi dengan mengemas nilai ke dalam sebuah objek atau tipe data yang sesuai. Salah satu cara yang umum adalah mengembalikan list. Ini adalah kode membuat fungsi yang mengembalikan multiple value menggunakan list.
 ![Alt text](<docs/tugas 7.png>)
