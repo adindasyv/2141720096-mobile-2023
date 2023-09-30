@@ -42,8 +42,15 @@ Langkah 6 : Date and Time Pickers
  - Pembuatan file widget class date_time_picker.dart yang isinya function untuk menampikan date and time picker
  - Pembuatan file widget class text_field_widget.dart yang isinya function untuk menampilkan text field
  - Lalu proses import widget class diatas kedalam main.dart
+
  ![Alt text](images/tugas2.1.png)
  - Selanjutnya memanggil MyTextField, AlertButton, dan MyDateTimePicker pada main.dart
+ 
  ![Alt text](images/tugas2.2.png)
  - Menghasilkan output seperti dibawah ini
+ 
  ![Alt text](images/tugas2.gif)
+<br><br>
+ 3. Selesaikan Codelabs: Your first Flutter app, lalu buatlah laporan praktikumnya dan push ke repository GitHub Anda!<br>
+ [Tugas No.3 Ada Disini](https://github.com/adindasyv/2141720096-mobile-2023/tree/main/week-05/adinda_app)
+
