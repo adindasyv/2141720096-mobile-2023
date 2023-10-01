@@ -1,16 +1,77 @@
+## ADINDA WAHYU LUCHMANSYAHVIRA (2141720096 / TI - 3H)
 # adinda_app
+### Langkah 1 : Membuat Project
+- Mengganti kode pubspec.yaml
+![Alt text](images/pubspec.png)
 
-A new Flutter project.
+- Mengganti kode analysis_options.yaml
+![Alt text](images/analysis_option.png)
 
-## Getting Started
+- Mengganti konten file main.dart menjadi seperti gambar dibawah 
+![Alt text](images/main1.png)
 
-This project is a starting point for a Flutter application.
+### Langkah 2 : Menambahkan Tombol
+- Meluncurkan Aplikasi
+![Alt text](images/debugmain1.png)
 
-A few resources to get you started if this is your first Flutter project:
+- Hot Reload Pertama
+![Alt text](images/hotreload1.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Menambahkan tombol
+![Alt text](images/addtombol.gif)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Perilaku Pertama Anda <br>
+dimana setiap menekan tombol Next maka akan menghasilkan pasangan kata acak yang baru
+![Alt text](images/perilakupertama.gif)
+
+### Langkah 3 : Memperindah Tampilan Aplikasi
+- Mengkstrak Widget
+![Alt text](images/ekstrakwidget.png)
+
+- Menambahkan Kartu
+![Alt text](images/tambahkartu.png)
+
+- Tema dan Gaya
+![Alt text](images/theme.gif)
+
+- Text Theme
+![Alt text](images/textTheme.png)
+
+- Meningkatkan Aksesibilitas
+![Alt text](images/aksesbilitas.png)
+
+- Menempatkan UI di Tengah
+![Alt text](images/uitengah1.png)
+
+- Wrap with Center
+![Alt text](images/uitengah2.png)
+
+- Menghapus Text diatas BigCard
+![Alt text](images/uitengah3.png)
+
+### Langkah 4 : Menambahkan Fungsi
+- Menambahkan Logika Bisnis
+![Alt text](<images/logika bisnis.png>)
+
+- Menambahkan Tombol
+![Alt text](images/tambahtombol.png)
+
+- ElevatedButton untuk tombol dengan ikon hati
+![Alt text](images/elevatedbutton.png)
+### Langkah 5 : Menambahkan Kolom Samping Navigasi
+- Membuat layar terpisah untuk bagian favorit pengguna. Menerapkan StatefulWidget
+![Alt text](images/kolomnavigasi.png)
+
+- Widget stateless versus stateful<br>
+setState
+![Alt text](images/setState.gif)<br>
+selectedIndex
+![Alt text](images/selectedIndex.gif)
+
+- Tingkat Respon
+![Alt text](images/responsif.gif)
+
+### Langkah 6 : Menambahkan Halaman Baru
+- Menampilkan daftar favorites dalam widget stateless baru, FavoritePage, lalu menampilkan widget tersebut bukan Placeholder
+![Alt text](images/newpage.gif)
+
