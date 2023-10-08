@@ -25,7 +25,7 @@ dimana setiap menekan tombol Next maka akan menghasilkan pasangan kata acak yang
 ![Alt text](images/perilakupertama.gif)
 
 ### Langkah 3 : Memperindah Tampilan Aplikasi
-- Mengkstrak Widget
+- Mengekstrak Widget
 ![Alt text](images/ekstrakwidget.png)
 
 - Menambahkan Kartu

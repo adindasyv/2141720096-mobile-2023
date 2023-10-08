@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Adinda App',
+        title: 'Namer App',
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
         ),
         home: MyHomePage(),
       ),
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
-  // add this code
+
   void getNext() {
     current = WordPair.random();
     notifyListeners();
@@ -42,8 +42,9 @@ class MyAppState extends ChangeNotifier {
   var optionBSelected = false;
   var loadingFromNetwork = false;
 
-  // add this code
+  // ↓ Add the code below.
   //var favorites = <WordPair>[];
+
   void toggleFavorite() {
     if (favorites.contains(current)) {
       favorites.remove(current);
@@ -61,7 +62,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     Widget page;
@@ -75,7 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }
-
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         body: Row(
@@ -104,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               child: Container(
                 color: Theme.of(context).colorScheme.primaryContainer,
-                child: page, // Gunakan variabel 'page' di sini.
+                child: page,
               ),
             ),
           ],
@@ -154,7 +153,6 @@ class GeneratorPage extends StatelessWidget {
     } else {
       icon = Icons.favorite_border;
     }
-
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -196,18 +194,17 @@ class BigCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context); // add new code
-    // add this code
+    final theme = Theme.of(context);
     final style = theme.textTheme.displayMedium!.copyWith(
       color: theme.colorScheme.onPrimary,
     );
 
     return Card(
-      color: theme.colorScheme.primary, // add new code
+      color: theme.colorScheme.primary,
       child: Padding(
         padding: const EdgeInsets.all(20),
 
-        // add this code
+        // ↓ Make the following change.
         child: Text(
           pair.asLowerCase,
           style: style,
