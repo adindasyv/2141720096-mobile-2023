@@ -51,4 +51,6 @@ Pada langkah terakhir ini, atur semua elemen dalam ListView, bukan Column, karen
 
 2. Silakan implementasikan di project baru "basic_layout_flutter" dengan mengakses sumber ini: https://docs.flutter.dev/codelabs/layout-basics
 
-- Untuk link no 2 bisa dilihat di bawah sini!
+- Untuk link no 2 bisa dilihat
+[DISINI!](https://github.com/adindasyv/2141720096-mobile-2023/tree/main/week-07/basic_layout_flutter)
+
