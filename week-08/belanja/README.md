@@ -130,11 +130,11 @@ class HomePage extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            const Icon(Icons.star, color: Colors.amber),
+                            const Icon(Icons.star, color: Colors.yellow),
                             Text(
                               item.rating.toString(),
                               style: const TextStyle(
-                                color: Colors.amber,
+                                color: Colors.yellow,
                                 fontSize: 14,
                               ),
                             ),
@@ -147,7 +147,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         'Rp. ${item.price}',
                         style: const TextStyle(
-                          color: Colors.deepOrange,
+                          color: Colors.red,
                           fontSize: 14,
                         ),
                       ),
@@ -166,36 +166,43 @@ class HomePage extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: const BoxDecoration(
-            color: Colors.blue,
-          ),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Adinda Wahyu Luchmansyahvira',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
+        ),
+        child: BottomAppBar(
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 139, 191, 229),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Adinda Wahyu Luchmansyahvira',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-              Text(
-                '2141720096',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+                Text(
+                  '2141720096',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
 
 
 ```
@@ -206,72 +213,85 @@ import 'package:belanja/models/item.dart';
 import 'package:flutter/material.dart';
 
 class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+  const ItemPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
     final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
+    final double aspectRatio =
+        1; // Menggunakan nilai tetap rasio aspek (1) yang telah Anda tentukan sebelumnya
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Item Details'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Hero(
-              tag: 'productImage${itemArgs.name}',
-              child: Image.asset(itemArgs.imageUrl),
-            ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  '${itemArgs.name}',
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
+                Hero(
+                  tag: 'productImage${itemArgs.name}',
+                  child: AspectRatio(
+                    aspectRatio: aspectRatio,
+                    child: Image.asset(
+                      itemArgs.imageUrl,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
+                const SizedBox(height: 16),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Icon(Icons.star, color: Colors.amber),
                     Text(
-                      itemArgs.rating.toString(),
+                      '${itemArgs.name}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        const Icon(Icons.star, color: Colors.amber),
+                        Text(
+                          itemArgs.rating.toString(),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Rp. ${itemArgs.price}',
+                      style: const TextStyle(
+                        color: Colors.deepOrange,
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      'Stok: ${itemArgs.stok}',
+                      style: const TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
-            const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Rp. ${itemArgs.price}',
-                  style: const TextStyle(
-                    color: Colors.deepOrange,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  'Stok: ${itemArgs.stok}',
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 }
+
 
 ```
 
@@ -305,3 +325,4 @@ class MyApp extends StatelessWidget {
 
 ```
 ### Hasil Akhir
+![Alt text](assets/hasil.gif)
