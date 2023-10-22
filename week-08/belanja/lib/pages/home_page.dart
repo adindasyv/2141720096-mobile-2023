@@ -99,11 +99,11 @@ class HomePage extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            const Icon(Icons.star, color: Colors.amber),
+                            const Icon(Icons.star, color: Colors.yellow),
                             Text(
                               item.rating.toString(),
                               style: const TextStyle(
-                                color: Colors.amber,
+                                color: Colors.yellow,
                                 fontSize: 14,
                               ),
                             ),
@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         'Rp. ${item.price}',
                         style: const TextStyle(
-                          color: Colors.deepOrange,
+                          color: Colors.red,
                           fontSize: 14,
                         ),
                       ),
@@ -135,30 +135,36 @@ class HomePage extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: const BoxDecoration(
-            color: Colors.blue,
-          ),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Adinda Wahyu Luchmansyahvira',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(15),
+          topRight: Radius.circular(15),
+        ),
+        child: BottomAppBar(
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 139, 191, 229),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Adinda Wahyu Luchmansyahvira',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-              Text(
-                '2141720096',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+                Text(
+                  '2141720096',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
