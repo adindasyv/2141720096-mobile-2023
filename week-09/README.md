@@ -123,25 +123,24 @@ class _MyHomePageState extends State<MyHomePage> {
 ![Alt text](docs/hasil.jpg)
 
 
-#### 2. Jelaskan maksud dari langkah 2 pada praktikum tersebut!
+## 2. Jelaskan maksud dari langkah 2 pada praktikum tersebut!
 
 - Langkah 2 mengartikan bahwa menambahkan dependensi auto_size_text ke dalam proyek yang sedang kita kerjakan. Perintah **flutter pub add** digunakan untuk menambahkan plugin ke proyek. Ketika menjalankan perintah **```flutter pub add auto_size_text```** di terminal, maka secara otomatis akan mendownload dan mengintegrasikan plugin auto_size_text ke dalam proyek kita.
 
-#### 3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
+## 3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
 
 - **```final String text;```** adalah deklarasi variabel yang digunakan untuk menyimpan teks dalam widget, diperlukan saat membuat instance **RedTextWidget**.
 Kemudian konstruktor **```RedTextWidget```** menerima parameter key untuk identifikasi widget dan text (wajib diisi) untuk menampilkan teks dalam widget tersebut.
 
-#### 4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
+## 4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
 
 - Widget pertama adalah Container dengan instance dari **RedTextWidget** di dalamnya, menampilkan teks merah dengan penyesuaian ukuran otomatis. Container ini memiliki latar belakang kuning (Colors.yellowAccent) dan lebar 50 piksel.
 - Widget kedua adalah Container dengan child berupa instance dari widget Text. Container ini memiliki latar belakang hijau (Colors.greenAccent) dan lebar 100 piksel.
 
 Perbedaan antara kedua widget tersebut terletak pada pengaturan teks yang ditampilkan. Widget pertama memiliki pengaturan kustom seperti style, maxline, dan overflow, sementara widget kedua tidak diatur secara eksplisit, menghasilkan tampilan default dari widget Text().
 
-#### 5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi [ini](https://pub.dev/documentation/auto_size_text/latest/) !
+## 5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi [ini](https://pub.dev/documentation/auto_size_text/latest/) !
 
-Jawab:
 - Parameter text adalah teks yang ditampilkan dalam widget AutoSizeText dan diukur serta diatur ukuran fontnya secara otomatis.
 - Parameter style mengatur gaya teks, seperti warna (red) dan ukuran font (14).
 - Parameter maxLines menentukan jumlah maksimum baris teks; diatur sebagai 2, teks akan muncul dalam maksimal 2 baris. Jika lebih, ditampilkan dengan elipsis (...).
