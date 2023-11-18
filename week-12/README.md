@@ -37,3 +37,11 @@ Sementara itu, langkah 2 tidak memiliki blok try-catch dalam fungsi calculate, s
 ### Soal 7
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 7".
 ![Alt text](docs/soal7.gif)
+### Soal 8
+- Jelaskan maksud perbedaan kode langkah 1 dan 4!<br>
+Langkah 1 menggunakan pustaka eksternal yang berasal dari async dengan FutureGroup. Ini memungkinkan untuk menambahkan beberapa Future ke dalam grup dan menunggu penyelesaian grup tersebut menggunakan futureGroup.future. Kemudian, melakukan perhitungan terhadap nilai yang dikembalikan oleh Future yang ada dalam grup. <br>
+Langkah 4, di sisi lain, menggunakan Future.wait, suatu fungsi bawaan Dart yang menunggu sejumlah Future untuk menyelesaikan dan kemudian mengembalikan List hasil. Ini memungkinkan menunggu beberapa Future sekaligus tanpa perlu menggunakan pustaka eksternal.
+## Praktikum 7 - Menangani Respon Error pada Async Code
+### Soal 9
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 9".
+![Alt text](docs/soal9.gif)

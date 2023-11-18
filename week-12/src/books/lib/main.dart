@@ -95,6 +95,16 @@ class _FuturePageState extends State<FuturePage> {
         result = total.toString();
       });
     });
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
   }
 
   String result = '';
@@ -130,7 +140,16 @@ class _FuturePageState extends State<FuturePage> {
                 // }).catchError((e) {
                 //   result = 'An error occurred';
                 // });
-                returnFG();
+                // returnFG();
+                returnError().then((value) {
+                  setState(() {
+                    result = 'Success';
+                  });
+                }).catchError((onError) {
+                  setState(() {
+                    result = onError.toString();
+                  });
+                }).whenComplete(() => print('Complete'));
               },
             ),
             const Spacer(),
