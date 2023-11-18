@@ -46,19 +46,32 @@ class _FuturePageState extends State<FuturePage> {
         title: const Text('Back from the Future'),
       ),
       body: Center(
-        child: Column(children: [
-          const Spacer(),
-          ElevatedButton(
-            child: const Text('GO!'),
-            onPressed: () {},
-          ),
-          const Spacer(),
-          Text(result),
-          const Spacer(),
-          const CircularProgressIndicator(),
-          const Spacer(),
-        ]),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        child: Column(
+          children: [
+            const Spacer(),
+            ElevatedButton(
+              child: const Text('GO!'),
+              onPressed: () {
+                setState(() {});
+                getData().then(
+                  (value) {
+                    result = value.body.toString().substring(0, 450);
+                    setState(() {});
+                  },
+                ).catchError((_) {
+                  result = 'An error occurred';
+                  setState(() {});
+                });
+              },
+            ),
+            const Spacer(),
+            Text(result),
+            const Spacer(),
+            const CircularProgressIndicator(),
+            const Spacer(),
+          ],
+        ),
+      ),
     );
   }
 }
