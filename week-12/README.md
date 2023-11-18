@@ -21,3 +21,9 @@ Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan A
 2. kode 2 menjelaskan tentang fungsi count yang menjalankan tiga fungsi lainnya secara berurutan menggunakan await. Fungsi-fungsi tersebut (returnOneAsync, returnTwoAsync, returnThreeAsync) mengembalikan nilai setelah penundaan selama 3 detik masing-masing. Nilai-nilai ini ditambahkan ke variabel total, dan hasilnya diubah menjadi string sebelum diberikan kepada variabel result. Terakhir, setState dipanggil untuk memperbarui tampilan dengan nilai hasil yang baru.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".
 ![Alt text](docs/soal4.gif)
+## Praktikum 3 - Menggunakan Completer di Future
+### Soal 5
+- Jelaskan maksud kode langkah 2 tersebut! <br>
+Kode menggunakan Completer untuk menciptakan objek Future, memungkinkan penundaan eksekusi melalui calculate dengan menunggu 5 detik. Fungsi getNumber membuat Completer<int>, memanggil calculate, dan mengembalikan objek future untuk akses hasil perhitungan asynchronous di masa depan. Setelah penundaan selesai, calculate menyelesaikan completer dengan nilai 42, menandakan bahwa tugas telah selesai.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".
+![Alt text](docs/soal5.gif)
