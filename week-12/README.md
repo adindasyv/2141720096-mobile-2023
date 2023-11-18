@@ -33,3 +33,7 @@ Pada langkah 5-6 menggunakan blok try-catch dalam fungsi calculate, sehingga jik
 Sementara itu, langkah 2 tidak memiliki blok try-catch dalam fungsi calculate, sehingga tidak menangani secara khusus kesalahan yang mungkin terjadi selama penundaan.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
 ![Alt text](docs/soal6.gif)
+## Praktikum 4 - Memanggil Future secara paralel
+### Soal 7
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 7".
+![Alt text](docs/soal7.gif)
