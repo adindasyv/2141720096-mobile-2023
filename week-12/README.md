@@ -27,3 +27,9 @@ Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan A
 Kode menggunakan Completer untuk menciptakan objek Future, memungkinkan penundaan eksekusi melalui calculate dengan menunggu 5 detik. Fungsi getNumber membuat Completer<int>, memanggil calculate, dan mengembalikan objek future untuk akses hasil perhitungan asynchronous di masa depan. Setelah penundaan selesai, calculate menyelesaikan completer dengan nilai 42, menandakan bahwa tugas telah selesai.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".
 ![Alt text](docs/soal5.gif)
+### Soal 6
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut! <br>
+Pada langkah 5-6 menggunakan blok try-catch dalam fungsi calculate, sehingga jika ada kesalahan selama penundaan, completer.completeError({}) akan dipanggil untuk menandai penyelesaian dengan kesalahan.
+Sementara itu, langkah 2 tidak memiliki blok try-catch dalam fungsi calculate, sehingga tidak menangani secara khusus kesalahan yang mungkin terjadi selama penundaan.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
+![Alt text](docs/soal6.gif)
