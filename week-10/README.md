@@ -1,38 +1,147 @@
-# Praktikum Minggu-11 : Dasar State Management
-### Praktikum 1 : Dasar State dengan Model-View
-### Tugas Praktikum 1
-1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki.
-2. Jelaskan maksud dari langkah 4 pada praktikum tersebut! Mengapa dilakukan demikian?
-- export **'plan.dart';** Ini mengatakan bahwa berkas saat ini (tempat pernyataan ini dituliskan) akan mengekspor (export) semua definisi (class, fungsi, variabel, dll.) yang ada dalam berkas plan.dart. Sedangkan export **'task.dart';** Hal yang sama berlaku untuk berkas task.dart. Ini memungkinkan berkas saat ini untuk mengekspor semua definisi dari task.dart
-3. Mengapa perlu variabel plan di langkah 6 pada praktikum tersebut? Mengapa dibuat konstanta ?
-- Dalam langkah 6 pada praktikum tersebut, **Plan plan = const Plan();** digunakan untuk membuat objek dari kelas Plan dan menginisialisasinya dengan nilai konstan menggunakan kata kunci const. Pemilihan konstanta (const) untuk variabel plan dilakukan untuk memberikan nilai default pada awalnya dan memastikan bahwa objek plan selalu ada dengan nilai tetap yang sama selama masa hidup widget ini.
-4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
-- Membuat aplikasi flutter bernama **Master Plan Adinda**. Dimana aplikasi ini mempunyai model data tugas dan rencana. Tampilan utama juga menggunakan ListView.builder untuk menampilkan daftar tugas dan juga user dapat menambahkan tugas baru dan juga bisa melakukan check pada checkbox untuk menandai tugas sudah berhasil. 
-![Alt text](docs/praktikum1.gif)
-5. Apa kegunaan method pada Langkah 11 dan 13 dalam lifecyle state ?
-- Langkah 11 - **initState** <br>
-Pada Langkah 11, method initState digunakan untuk melakukan inisialisasi saat stateful widget pertama kali dibuat, objek ScrollController diciptakan dan diatur untuk mendengarkan perubahan. Ketika pengguna menggulir, metode ini memastikan bahwa fokus dihapus (menggunakan FocusScope.of(context).requestFocus(FocusNode())). Ini biasanya digunakan untuk menghindari masalah fokus keyboard yang mungkin terjadi 
-- Langkah 13 - **dispose** <br>
-Dipanggil saat stateful widget dihapus. Bertanggung jawab untuk membersihkan atau membebaskan sumber daya, seperti menghapus objek ScrollController dengan dispose(). Ini penting untuk mencegah kebocoran memori atau masalah sumber daya lainnya. dispose dipanggil sebelum widget dihapus.
-### Praktikum 2 : InheritedWidget
-### Tugas Praktikum 2
-1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
-2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
-- Pada langkah 1, InheritedNotifier dan InheritedWidget digunakan untuk menyediakan dan mendengarkan perubahan pada **ValueNotifierPlan** ke dalam pohon widget. ValueNotifier digunakan untuk memonitor perubahan pada objek Plan, dan InheritedNotifier menyederhanakan logika pembaruan widget ketika terjadi perubahan pada nilai ValueNotifier. Ini membuat manajemen keadaan menjadi lebih efisien dan otomatis.
-3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
-- Method memiliki dua tujuan utama : <br>
-a. completedCount: Menghitung jumlah tugas yang telah selesai (complete). Method ini menggunakan ekspresi lambda dan fungsi where untuk menyaring tugas-tugas yang telah selesai, dan kemudian menggunakan fungsi length untuk menghitung jumlahnya. <br>
-b. completenessMessage: Membuat pesan yang menyatakan seberapa banyak tugas yang telah selesai dari total jumlah tugas. Ini memanfaatkan nilai yang dihitung sebelumnya dengan completedCount dan menggabungkannya dengan total jumlah tugas.
-4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
-- Pada aplikasi Flutter memiliki manajemen state yang menggunakan InheritedNotifier. Tampilan PlanScreen, progress rencana ditampilkan secara jelas di bagian bawah dan pembaruan UI yang otomatis merespons perubahan pada data rencana yang dikelola oleh ValueNotifier
-![Alt text](docs/praktikum2.gif)
-### Praktikum 3 : State di Multiple Screens
-### Tugas Praktikum 3
-1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
-2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
-![Alt text](docs/tugas3.png)
-- Sebelah kiri: Pengguna membuat rencana di PlanCreatorScreen dengan PlanProvider mengelola data dan tampilan. Column menata vertikal dengan TextField dan Expanded. <br>
-Sebelah kanan: Setelah navigasi, pengguna melihat daftar rencana di PlanScreen. PlanProvider di root memastikan akses lintas tampilan. Column, Expanded, dan SafeArea mengatur optimal, termasuk ListView. Ada juga Text yang mungkin menampilkan pesan. Navigasi terjadi antara langkah-langkah pembuatan rencana dan melihat rencana. Ini menunjukkan manajemen data efektif dan tata letak yang responsif.
-3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
-- Setelah Praktikum 3, "Master Plan" dapat mengelola dan menampilkan daftar rencana melalui PlanProvider. Modifikasi pada PlanProvider, main.dart, dan plan_screen.dart memungkinkan manajemen state yang terpusat. Pengguna dapat dinamis mengelola rencana dengan penambahan PlanCreatorScreen. Ini meningkatkan fleksibilitas dan responsivitas aplikasi.
-![Alt text](docs/praktikum3.gif)
+# Praktikum Minggu ke 10 - Manajemen Plugin
+## 1. Selesaikan Praktikum tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot hasil pekerjaan beserta penjelasannya di file README.md!
+
+### Langkah 2 - Menambahkan Plugin
+![Alt text](docs/p1.png)
+
+### Langkah 3 & 4 - Buat file red_text_widget.dart dan Menambah Widget AutoSizeText
+![Alt text](<docs/p2 error.png>)
+- Terjadi error dikarenakan variabel 'text' tidak didefinisikan di dalam widget. Dan kode tidak menerima teks sebagai parameter, hal ini tentu saja menyebabkan error. Untuk perbaikannya ada dalam kode file dibawah ini: 
+
+#### file red_text_widget.dart
+```dart
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/material.dart';
+
+class RedTextWidget extends StatelessWidget {
+  final String text; // Tambahkan variabel text
+
+  const RedTextWidget({Key? key, required this.text})
+      : super(key: key); // Terima teks sebagai parameter
+
+  @override
+  Widget build(BuildContext context) {
+    return AutoSizeText(
+      text,
+      style: const TextStyle(color: Colors.red, fontSize: 14),
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
+    );
+  }
+}
+```
+
+### Langkah 5 - Menambahkan Widget di main.dart
+#### file main.dart
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_plugin_pubdev/widget/red_text_widget.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              color: Colors.yellowAccent,
+              width: 50,
+              child: const RedTextWidget(
+                text: 'You have pushed the button this many times:',
+              ),
+            ),
+            Container(
+              color: Colors.greenAccent,
+              width: 100,
+              child: const Text(
+                'You have pushed the button this many times:',
+              ),
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+```
+
+## Hasil Running
+![Alt text](docs/hasil.jpg)
+
+
+## 2. Jelaskan maksud dari langkah 2 pada praktikum tersebut!
+
+- Langkah 2 mengartikan bahwa menambahkan dependensi auto_size_text ke dalam proyek yang sedang kita kerjakan. Perintah **flutter pub add** digunakan untuk menambahkan plugin ke proyek. Ketika menjalankan perintah **```flutter pub add auto_size_text```** di terminal, maka secara otomatis akan mendownload dan mengintegrasikan plugin auto_size_text ke dalam proyek kita.
+
+## 3. Jelaskan maksud dari langkah 5 pada praktikum tersebut!
+
+- **```final String text;```** adalah deklarasi variabel yang digunakan untuk menyimpan teks dalam widget, diperlukan saat membuat instance **RedTextWidget**.
+Kemudian konstruktor **```RedTextWidget```** menerima parameter key untuk identifikasi widget dan text (wajib diisi) untuk menampilkan teks dalam widget tersebut.
+
+## 4. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!
+
+- Widget pertama adalah Container dengan instance dari **RedTextWidget** di dalamnya, menampilkan teks merah dengan penyesuaian ukuran otomatis. Container ini memiliki latar belakang kuning (Colors.yellowAccent) dan lebar 50 piksel.
+- Widget kedua adalah Container dengan child berupa instance dari widget Text. Container ini memiliki latar belakang hijau (Colors.greenAccent) dan lebar 100 piksel.
+
+Perbedaan antara kedua widget tersebut terletak pada pengaturan teks yang ditampilkan. Widget pertama memiliki pengaturan kustom seperti style, maxline, dan overflow, sementara widget kedua tidak diatur secara eksplisit, menghasilkan tampilan default dari widget Text().
+
+## 5. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text berdasarkan tautan pada dokumentasi [ini](https://pub.dev/documentation/auto_size_text/latest/) !
+
+- Parameter text adalah teks yang ditampilkan dalam widget AutoSizeText dan diukur serta diatur ukuran fontnya secara otomatis.
+- Parameter style mengatur gaya teks, seperti warna (red) dan ukuran font (14).
+- Parameter maxLines menentukan jumlah maksimum baris teks; diatur sebagai 2, teks akan muncul dalam maksimal 2 baris. Jika lebih, ditampilkan dengan elipsis (...).
+- Parameter overflow mengontrol perilaku teks ketika melebihi maxLines. Misalnya, dengan TextOverflow.ellipsis, teks yang tidak muat akan muncul dengan elipsis.
