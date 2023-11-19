@@ -76,5 +76,17 @@ Praktikum sebelumnya menampilkan lokasi secara langsung pada inisialisasi dengan
 ### Soal 14
 - Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian? <br>
 Sebenarnya tidak ada perbedaan UI, karena langkah ini hanya menambahkan handlingError yang akan dijalankan ketika adanya kesalahan. Karena pada proses ini tidak ada kesalahaan, maka tidak terjadi pemrosesan data lokasi. Maka dari itu, bagian handlingError tidak dijalankan.
-- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14".
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14". <br>
 ![Alt text](docs/soal14.gif)
+## Praktikum 8 - Navigation route dengan Future Function
+### Soal 15
+- Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+- Silakan ganti dengan warna tema favorit Anda.<br>
+![Alt text](docs/soal15.png)
+### Soal 16
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ? <br>
+Ketika button diklik, maka akan berubah warna sesuai dengan yang sudah diatur pada elevatedbutton di class navigation_second.dart. Hal ini karena adanya fungsi pada setiap button yang memiliki parameter serupa dan color yang sudah diatur juga, maka ketika button diklik akan menampilkan warna yang berbeda-beda sesuai dengan pengisian variabel color.
+- Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!
+![Alt text](docs/soal16.2.png)
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 16". <br>
+![Alt text](docs/soal16.gif)
