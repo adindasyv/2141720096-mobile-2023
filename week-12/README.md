@@ -73,3 +73,8 @@ Praktikum sebelumnya menampilkan lokasi secara langsung pada inisialisasi dengan
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 13". <br>
 ![Alt text](docs/soal13.gif)
 - Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
+### Soal 14
+- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian? <br>
+Sebenarnya tidak ada perbedaan UI, karena langkah ini hanya menambahkan handlingError yang akan dijalankan ketika adanya kesalahan. Karena pada proses ini tidak ada kesalahaan, maka tidak terjadi pemrosesan data lokasi. Maka dari itu, bagian handlingError tidak dijalankan.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 14".
+![Alt text](docs/soal14.gif)
