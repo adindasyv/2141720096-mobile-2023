@@ -66,3 +66,10 @@ Jika melakukan running pada browser, koordinar GPS akan muncul karena flutter we
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 12". <br>
 Running pada emulator android
 ![Alt text](docs/soal12.2.gif)
+## Praktikum 7 - Manajemen Future dengan FutureBuilder
+### Soal 13
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian? <br>
+Praktikum sebelumnya menampilkan lokasi secara langsung pada inisialisasi dengan menggunakan setState untuk memperbarui tampilan. Di sisi lain, Praktikum 7 menggunakan FutureBuilder untuk menangani proses asynchronous, memberikan respons dinamis saat menunggu, dan menampilkan hasil lokasi setelah proses selesai. Praktikum 7 juga tidak mengandalkan setState di dalam initState, melainkan langsung memberikan hasil lokasi ke dalam variabel position. Pilihan antara keduanya bergantung pada preferensi desain UI dan kebutuhan penanganan asinkron. Keduanya memiliki fungsionalitas yang serupa, tetapi Praktikum 7 memberikan pengalaman pengguna yang lebih responsif.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 13". <br>
+![Alt text](docs/soal13.gif)
+- Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.
