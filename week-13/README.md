@@ -16,3 +16,7 @@ fungsi yields* adalah untuk mengirimkan nilai-nilai dari stream yang dihasilkan 
 - Apa maksud isi perintah kode tersebut? <br>
 Penjelasan mengenai kode adalah  kode tersebut membuat sebuah stream yang menghasilkan warna dari daftar warna setiap detik. yield* digunakan untuk mengirimkan nilai-nilai dari stream yang dihasilkan oleh **Stream.periodic.** Tujuan akhirnya adalah menghasilkan suatu stream yang terus-menerus mengeluarkan warna-warna yang ada dalam daftar colors.
 - Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
+### Soal 4
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. <br>
+![Alt text](docs/soal4.gif)
+- Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
