@@ -10,3 +10,9 @@
 - Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut. 
 ![Alt text](docs/soal2.png)
 - Lakukan commit hasil jawaban Soal 2 dengan pesan "W13: Jawaban Soal 2"
+### Soal 3 
+- Jelaskan fungsi keyword yield* pada kode tersebut! <br>
+fungsi yields* adalah untuk mengirimkan nilai-nilai dari stream yang dihasilkan oleh ekspresi di sebelah kanan. Dengan kata lain, setiap fungsi ini dipanggil, akan mengirimkan warna dari stream yang dihasilkan oleh **Stream.periodic**
+- Apa maksud isi perintah kode tersebut? <br>
+Penjelasan mengenai kode adalah  kode tersebut membuat sebuah stream yang menghasilkan warna dari daftar warna setiap detik. yield* digunakan untuk mengirimkan nilai-nilai dari stream yang dihasilkan oleh **Stream.periodic.** Tujuan akhirnya adalah menghasilkan suatu stream yang terus-menerus mengeluarkan warna-warna yang ada dalam daftar colors.
+- Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
