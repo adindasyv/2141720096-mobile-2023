@@ -6,3 +6,7 @@
 - Gantilah warna tema aplikasi sesuai kesukaan Anda.
 ![Alt text](docs/soal1.2.png)
 - Lakukan commit hasil jawaban Soal 1 dengan pesan "W13: Jawaban Soal 1"
+### Soal 2
+- Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut. 
+![Alt text](docs/soal2.png)
+- Lakukan commit hasil jawaban Soal 2 dengan pesan "W13: Jawaban Soal 2"
