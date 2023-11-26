@@ -47,3 +47,14 @@ Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<in
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![Alt text](docs/soal8.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
+## Praktikum 4 - Subscribe ke Stream Events
+### Soal 9
+- Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+1. Kode langkah 2 untuk melakukan langganan pada stream agar mendapatkan informasi ataupun output dari stream
+2. Kode langkah 6 untuk pembatalan subscribe pada stream. Jadi ketika screen tidak ditampilkan, metode ini akan dipanggil. Hal ini berguna untuk membersihkan sumber daya dan menghemat penyimpanan
+3. Kode langkah 8 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Selanjutnya, fungsi tersebut memeriksa apakah numberStreamController sudah ditutup (closed). Jika belum ditutup, nilai acak tersebut ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream. Jika numberStreamController sudah ditutup, maka nilai -1 akan di-set ke dalam state lastNumber. Ini bertujuan untuk menghindari penambahan data ke dalam stream yang sudah ditutup.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![Alt text](docs/soal9.gif)
+Setelah menekan tombol Stop Subscription
+![Alt text](docs/soal9.1.png)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
