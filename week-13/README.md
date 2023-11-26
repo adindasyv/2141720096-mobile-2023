@@ -2,7 +2,7 @@
 ## Praktikum 1 - Dart Streams
 ### Soal 1
 - Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
-![Alt text](docs/soal1.1.png)
+![Alt text](docs/soal1.1.png)<br>
 - Gantilah warna tema aplikasi sesuai kesukaan Anda.
 ![Alt text](docs/soal1.2.png)
 - Lakukan commit hasil jawaban Soal 1 dengan pesan "W13: Jawaban Soal 1"
@@ -30,9 +30,9 @@ Jadi, jika ingin melakukan iterasi secara langsung dan menggunakan await di dala
 ### Soal 6
 - Jelaskan maksud kode langkah 8 dan 10 tersebut!<br>
 1. Langkah 8 adalah ketika menginisialisasi objek NumberStream, mengambil controller stream, dan mendengarkan perubahan pada stream angka. Setiap kali ada perubahan, nilai terakhir (lastNumber) dalam state diperbarui menggunakan setState().
-2. Langkah 10 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Nilai acak tersebut kemudian ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream.
+2. Langkah 10 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Nilai acak tersebut kemudian ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream.<br>
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![Alt text](docs/soal6.gif)
+![Alt text](docs/soal6.gif)<br>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
 ### Soal 7
 - Jelaskan maksud kode langkah 13 sampai 15 tersebut! <br>
@@ -43,7 +43,7 @@ Kode langkah 13-15 akan membuat handling ketika terjadi sebuah error menggunakan
 ## Praktikum 3 - Injeksi Data ke Streams
 ### Soal 8
 - Jelaskan maksud kode langkah 1-3 tersebut!<br>
-Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<int, int> dengan nama transformer. Transformer ini mengubah setiap data dalam stream angka dengan mengalikannya dengan 10, menangani kesalahan dengan mengirimkan nilai -1, dan menutup sink saat stream selesai. Selanjutnya, kode menggunakan transformer tersebut untuk mengubah data dalam stream dari objek numberStreamController, dan hasilnya diobservasi. Setiap kali ada perubahan, nilai terakhir (lastNumber) dalam state diperbarui, dan jika terjadi kesalahan, nilai -1 akan di-set ke dalam state.
+Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<int, int> dengan nama transformer. Transformer ini mengubah setiap data dalam stream angka dengan mengalikannya dengan 10, menangani kesalahan dengan mengirimkan nilai -1, dan menutup sink saat stream selesai. Selanjutnya, kode menggunakan transformer tersebut untuk mengubah data dalam stream dari objek numberStreamController, dan hasilnya diobservasi. Setiap kali ada perubahan, nilai terakhir (lastNumber) dalam state diperbarui, dan jika terjadi kesalahan, nilai -1 akan di-set ke dalam state.<br>
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![Alt text](docs/soal8.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
@@ -52,30 +52,30 @@ Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<in
 - Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
 1. Kode langkah 2 untuk melakukan langganan pada stream agar mendapatkan informasi ataupun output dari stream
 2. Kode langkah 6 untuk pembatalan subscribe pada stream. Jadi ketika screen tidak ditampilkan, metode ini akan dipanggil. Hal ini berguna untuk membersihkan sumber daya dan menghemat penyimpanan
-3. Kode langkah 8 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Selanjutnya, fungsi tersebut memeriksa apakah numberStreamController sudah ditutup (closed). Jika belum ditutup, nilai acak tersebut ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream. Jika numberStreamController sudah ditutup, maka nilai -1 akan di-set ke dalam state lastNumber. Ini bertujuan untuk menghindari penambahan data ke dalam stream yang sudah ditutup.
+3. Kode langkah 8 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Selanjutnya, fungsi tersebut memeriksa apakah numberStreamController sudah ditutup (closed). Jika belum ditutup, nilai acak tersebut ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream. Jika numberStreamController sudah ditutup, maka nilai -1 akan di-set ke dalam state lastNumber. Ini bertujuan untuk menghindari penambahan data ke dalam stream yang sudah ditutup.<br>
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![Alt text](docs/soal9.gif)<br>
-Setelah menekan tombol Stop Subscription
+Setelah menekan tombol Stop Subscription<br>
 ![Alt text](docs/soal9.1.png)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
 ## Praktikum 5 - Multiple Stream Subscription
 ### Soal 10
 - Jelaskan mengapa error itu bisa terjadi ?
 ![Alt text](docs/soal10.png)<br>
-Error diatas terjadi karena kita saya mencoba menambahkan dua subscription pada stream yang sama tanpa membatalkan subscription sebelumnya. Hal ini terjadi ketika inisialisasi subscription2 pada method initState() karena sudah ada inisialisasi subscription untuk menangani stream yang sama pada satu waktu
+Error diatas terjadi karena kita saya mencoba menambahkan dua subscription pada stream yang sama tanpa membatalkan subscription sebelumnya. Hal ini terjadi ketika inisialisasi subscription2 pada method initState() karena sudah ada inisialisasi subscription untuk menangani stream yang sama pada satu waktu<br>
 ### Soal 11
 - Jelaskan mengapa hal itu bisa terjadi ?<br>
-Hal ini terjadi dikarenakan ketika button new random number, maka akan menghasilkan dua angka yang sama karena pemanggilan oleh objek subscription dan subscription2, dan akan mengembalikan value berupa event angka random yang dipisahkan dengan tanda '-'. Ketika button stop stream ditekan, maka akan menghentia=kan langganan stream dan tidak bisa mengeluarkan output meskipun kita menekan button new random number.
+Hal ini terjadi dikarenakan ketika button new random number, maka akan menghasilkan dua angka yang sama karena pemanggilan oleh objek subscription dan subscription2, dan akan mengembalikan value berupa event angka random yang dipisahkan dengan tanda '-'. Ketika button stop stream ditekan, maka akan menghentia=kan langganan stream dan tidak bisa mengeluarkan output meskipun kita menekan button new random number.<br>
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![Alt text](docs/soal11.gif)
+![Alt text](docs/soal11.gif)<br>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
 ## Praktikum 6 - StreamBuilder
 ### Soal 12
 - Jelaskan maksud kode pada langkah 3 dan 7 !
 1. Kode langkah 3 adalah kode yang mendefinisikan kelas NumberStream yang memiliki metode getNumber. Metode ini mengembalikan Stream<int> yang menghasilkan nilai acak antara 0 dan 9 setiap detiknya menggunakan Stream.periodic dan Random. Maka, kelas ini menyediakan aliran (stream) bilangan bulat acak dengan interval waktu satu detik.
-2. Kode langkah 7 adalah widget StreamBuilder digunakan untuk membangun antarmuka pengguna yang merespons perubahan pada Stream. Dalam contoh ini, StreamBuilder menggunakan numberStream sebagai sumber data, memperbarui antarmuka secara otomatis ketika data baru tiba. Kondisi hasError menangani kesalahan, dan jika ada data, teks besar ditampilkan di tengah layar. Jika tidak ada data, widget dikembalikan sebagai kosong.
+2. Kode langkah 7 adalah widget StreamBuilder digunakan untuk membangun antarmuka pengguna yang merespons perubahan pada Stream. Dalam contoh ini, StreamBuilder menggunakan numberStream sebagai sumber data, memperbarui antarmuka secara otomatis ketika data baru tiba. Kondisi hasError menangani kesalahan, dan jika ada data, teks besar ditampilkan di tengah layar. Jika tidak ada data, widget dikembalikan sebagai kosong.<br>
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![Alt text](docs/soal12.gif)
+![Alt text](docs/soal12.gif)<br>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
 ## Praktikum 7 - BLoC Pattern
 ### Soal 13
@@ -85,7 +85,7 @@ Pola BLoC diterapkan pada cara berikut:
 1. RandomNumberBloc memiliki dua StreamController: satu untuk input (_generateRandomController) dan satu untuk output (_randomNumberController).
 2. Melalui metode generateRandom, komponen luar dapat memicu pembangkitan angka acak.
 3. Pada saat inisialisasi RandomNumberBloc, sebuah listener ditambahkan ke _generateRandomController.stream yang memunculkan angka acak ke _randomNumberController.
-4. RandomScreen kemudian menggunakan StreamBuilder untuk mendengarkan perubahan pada _bloc.randomNumber dan mengupdate UI dengan angka acak yang dihasilkan.
+4. RandomScreen kemudian menggunakan StreamBuilder untuk mendengarkan perubahan pada _bloc.randomNumber dan mengupdate UI dengan angka acak yang dihasilkan.<br>
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![Alt text](docs/soal13.gif)
+![Alt text](docs/soal13.gif)<br>
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 13".
