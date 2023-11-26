@@ -54,14 +54,14 @@ Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<in
 2. Kode langkah 6 untuk pembatalan subscribe pada stream. Jadi ketika screen tidak ditampilkan, metode ini akan dipanggil. Hal ini berguna untuk membersihkan sumber daya dan menghemat penyimpanan
 3. Kode langkah 8 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Selanjutnya, fungsi tersebut memeriksa apakah numberStreamController sudah ditutup (closed). Jika belum ditutup, nilai acak tersebut ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream. Jika numberStreamController sudah ditutup, maka nilai -1 akan di-set ke dalam state lastNumber. Ini bertujuan untuk menghindari penambahan data ke dalam stream yang sudah ditutup.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
-![Alt text](docs/soal9.gif)
+![Alt text](docs/soal9.gif)<br>
 Setelah menekan tombol Stop Subscription
 ![Alt text](docs/soal9.1.png)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
 ## Praktikum 5 - Multiple Stream Subscription
 ### Soal 10
 - Jelaskan mengapa error itu bisa terjadi ?
-![Alt text](docs/soal10.png)
+![Alt text](docs/soal10.png)<br>
 Error diatas terjadi karena kita saya mencoba menambahkan dua subscription pada stream yang sama tanpa membatalkan subscription sebelumnya. Hal ini terjadi ketika inisialisasi subscription2 pada method initState() karena sudah ada inisialisasi subscription untuk menangani stream yang sama pada satu waktu
 ### Soal 11
 - Jelaskan mengapa hal itu bisa terjadi ?<br>
@@ -77,3 +77,15 @@ Hal ini terjadi dikarenakan ketika button new random number, maka akan menghasil
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![Alt text](docs/soal12.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
+## Praktikum 7 - BLoC Pattern
+### Soal 13
+- Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ? <br>
+Praktikum ini menciptakan aplikasi Flutter sederhana yang menggunakan pola BLoC (Business Logic Component) untuk mengelola logika bisnis dan pembaruan UI. Konsep pola BLoC terletak pada pembuatan kelas RandomNumberBloc yang bertanggung jawab untuk menghasilkan angka acak dan mengelola aliran data. Pola ini membantu memisahkan logika bisnis dari antarmuka pengguna.<br>
+Pola BLoC diterapkan pada cara berikut: 
+1. RandomNumberBloc memiliki dua StreamController: satu untuk input (_generateRandomController) dan satu untuk output (_randomNumberController).
+2. Melalui metode generateRandom, komponen luar dapat memicu pembangkitan angka acak.
+3. Pada saat inisialisasi RandomNumberBloc, sebuah listener ditambahkan ke _generateRandomController.stream yang memunculkan angka acak ke _randomNumberController.
+4. RandomScreen kemudian menggunakan StreamBuilder untuk mendengarkan perubahan pada _bloc.randomNumber dan mengupdate UI dengan angka acak yang dihasilkan.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![Alt text](docs/soal13.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 13".
