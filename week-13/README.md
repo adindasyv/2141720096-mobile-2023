@@ -26,3 +26,11 @@ Penjelasan mengenai kode adalah  kode tersebut membuat sebuah stream yang mengha
 2. **listen** digunakan untuk diluar konteks fungsi yang dijelaskan dengan async. Metode listen adalah metode pada objek stream yang memungkinkan untuk mendaftarkan fungsi callback yang akan dipanggil setiap kali ada data yang tersedia di dalam stream. <br>
 Jadi, jika ingin melakukan iterasi secara langsung dan menggunakan await di dalam fungsi yang diawasi, gunakan **await for**. Jika Anda hanya perlu mendengarkan perubahan stream dan menjalankan fungsi callback ketika ada data baru, Anda dapat menggunakan **listen**.
 - Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"
+## Praktikum 2 - Stream Controllers dan Sinks
+### Soal 6
+- Jelaskan maksud kode langkah 8 dan 10 tersebut!<br>
+1. Langkah 8 adalah ketika menginisialisasi objek NumberStream, mengambil controller stream, dan mendengarkan perubahan pada stream angka. Setiap kali ada perubahan, nilai terakhir (lastNumber) dalam state diperbarui menggunakan setState().
+2. Langkah 10 adalah fungsi addRandomNumber membuat objek Random untuk menghasilkan angka acak antara 0 dan 9. Nilai acak tersebut kemudian ditambahkan ke dalam stream menggunakan metode addNumberToSink pada objek numberStream.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![Alt text](docs/soal6.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
