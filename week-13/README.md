@@ -34,3 +34,9 @@ Jadi, jika ingin melakukan iterasi secara langsung dan menggunakan await di dala
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![Alt text](docs/soal6.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
+### Soal 7
+- Jelaskan maksud kode langkah 13 sampai 15 tersebut! <br>
+Kode langkah 13-15 akan membuat handling ketika terjadi sebuah error menggunakan methode addError() pada class stream.dart. Jika terjadi error atau kesalahan selama proses iterasi, maka nilai dari lastNumber diatur menjadi -1 <br>
+![Alt text](docs/soal7.gif)
+- Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
