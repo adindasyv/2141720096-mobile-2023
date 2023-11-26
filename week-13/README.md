@@ -40,3 +40,10 @@ Kode langkah 13-15 akan membuat handling ketika terjadi sebuah error menggunakan
 ![Alt text](docs/soal7.gif)
 - Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
+## Praktikum 3 - Injeksi Data ke Streams
+### Soal 8
+- Jelaskan maksud kode langkah 1-3 tersebut!<br>
+Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<int, int> dengan nama transformer. Transformer ini mengubah setiap data dalam stream angka dengan mengalikannya dengan 10, menangani kesalahan dengan mengirimkan nilai -1, dan menutup sink saat stream selesai. Selanjutnya, kode menggunakan transformer tersebut untuk mengubah data dalam stream dari objek numberStreamController, dan hasilnya diobservasi. Setiap kali ada perubahan, nilai terakhir (lastNumber) dalam state diperbarui, dan jika terjadi kesalahan, nilai -1 akan di-set ke dalam state.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![Alt text](docs/soal8.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
