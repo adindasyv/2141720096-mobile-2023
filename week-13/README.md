@@ -58,3 +58,14 @@ Kode langkah 1-3 mendeklarasikan dan menginisialisasi objek StreamTransformer<in
 Setelah menekan tombol Stop Subscription
 ![Alt text](docs/soal9.1.png)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
+## Praktikum 5 - Multiple Stream Subscription
+### Soal 10
+- Jelaskan mengapa error itu bisa terjadi ?
+![Alt text](docs/soal10.png)
+Error diatas terjadi karena kita saya mencoba menambahkan dua subscription pada stream yang sama tanpa membatalkan subscription sebelumnya. Hal ini terjadi ketika inisialisasi subscription2 pada method initState() karena sudah ada inisialisasi subscription untuk menangani stream yang sama pada satu waktu
+### Soal 11
+- Jelaskan mengapa hal itu bisa terjadi ?<br>
+Hal ini terjadi dikarenakan ketika button new random number, maka akan menghasilkan dua angka yang sama karena pemanggilan oleh objek subscription dan subscription2, dan akan mengembalikan value berupa event angka random yang dipisahkan dengan tanda '-'. Ketika button stop stream ditekan, maka akan menghentia=kan langganan stream dan tidak bisa mengeluarkan output meskipun kita menekan button new random number.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![Alt text](docs/soal11.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
